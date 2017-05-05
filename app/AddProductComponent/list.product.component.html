@@ -1,0 +1,21 @@
+<div class="col-md-6 col-md-offset-0">
+    <h2>Products List</h2>
+<table>
+  <tr>
+    <th>Product Name</th>
+    <th>Category</th>
+    <th></th>
+    <th>Quantity</th>
+  </tr>
+  <tr *ngFor="let product of product">
+    <td class="col-md-2">{{product.productName}}</td>
+    <td class="col-md-2">{{product.category}}</td>
+    <td class="col-md-2">{{product.quantity}}</td>
+    <td class="col-md-2"> <button class="btn btn-primary" (click)="viewDetails(product)">Edit</button></td>
+    <td class="col-md-2"> <button  class="btn btn-primary">Delete</button></td>
+  </tr>
+</table>
+</div>
+ <a [routerLink]="['/listProducts']" class="btn btn-link">Home</a>
+ <a [routerLink]="['/addProducts']" class="btn btn-link">Add Product</a>
+<a [routerLink]="['/login']">Logout</a>
